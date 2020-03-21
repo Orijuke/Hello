@@ -10,6 +10,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=365)
 
 @app.route('/')
 def index():
+	db = db_session.create_session()
     return render_template("public.html")
 
 
