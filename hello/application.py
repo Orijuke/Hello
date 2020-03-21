@@ -10,7 +10,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=365)
 
 @app.route('/')
 def index():
-    return render_template("public.html", news=news)
+    return render_template("public.html")
 
 
 def run():
