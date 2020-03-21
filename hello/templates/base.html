@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light navbar-expand-sm">
+        <h1 class="navbar-brand" href="#">Надпись "Привет"</h1>
+    </nav>
+
+    <h4 class="p-3 text-muted">Да, только это!</h4>
+
+    <main class="container-fluid">{% block content %}{% endblock %}</div>
+</body>
+
+</html>
