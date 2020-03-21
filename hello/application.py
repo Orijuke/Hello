@@ -1,6 +1,7 @@
 import os
 from datetime import timedelta
 from flask import Flask, render_template, redirect, url_for
+from hello.data import db_session
 
 
 app = Flask(__name__)
@@ -11,7 +12,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=365)
 @app.route('/')
 def index():
 	db = db_session.create_session()
-    return render_template("public.html")
+	return render_template("public.html")
 
 
 def run():
